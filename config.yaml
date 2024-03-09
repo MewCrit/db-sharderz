@@ -1,0 +1,14 @@
+
+
+shard-1:
+  server: ''
+  database: ''
+  username: ''
+  password: ''
+
+
+shard-2:
+  server: ''
+  database: ''
+  username: ''
+  password: ''

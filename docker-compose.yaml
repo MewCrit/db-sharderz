@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  shard_1:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - 1501:1433
+    environment: 
+      SA_PASSWORD: "YourStrong!Passw0rd1"
+      ACCEPT_EULA: "Y"
+    networks:
+      - shardz
+
+  shard_2:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    ports:
+      - 1502:1433
+    environment: 
+      SA_PASSWORD: "YourStrong!Passw0rd2"
+      ACCEPT_EULA: "Y"
+    networks:
+      - shardz
+       
+networks:
+  shardz:
+    driver: bridge
